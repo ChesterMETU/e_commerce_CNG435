@@ -28,6 +28,15 @@ export const handler = async (event, context) => {
 
   try {
     switch (event.routeKey) {
+      case "GET /itemsByUser/{id}":
+        body = await dynamo.send(
+          new ScanCommand({ 
+            TableName: tableName ,
+            FilterExpression : 'creator_id = :id',
+            ExpressionAttributeValues : {':id' : event.pathParameters.id}})
+        );
+        body = body.Items
+        break;
       case "DELETE /items/{id}":
         await dynamo.send(
           new DeleteCommand({
@@ -136,7 +145,7 @@ export const handler = async (event, context) => {
         const distinctValues = {};
 
         items.forEach(item => {
-          // Assuming 'AttributeName' is a string attribute. Adjust the type accordingly.
+          
           const attributeValue = item["category"];
           distinctValues[attributeValue] = true;
         });
