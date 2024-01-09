@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ecommerceflutter-staging-170454-authRole",
+      "UnauthRoleArn": "arn:aws:iam::837614956853:role/amplify-ecommerceflutter-staging-170454-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::837614956853:role/amplify-ecommerceflutter-staging-170454-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-ecommerceflutter-staging-170454-deployment",
+      "UnauthRoleName": "amplify-ecommerceflutter-staging-170454-unauthRole",
+      "StackName": "amplify-ecommerceflutter-staging-170454",
+      "StackId": "arn:aws:cloudformation:eu-north-1:837614956853:stack/amplify-ecommerceflutter-staging-170454/b9a8d880-a347-11ee-aa7e-06dc51115fde",
+      "AmplifyAppId": "dgckiidogryri"
+    },
+    "categories": {
+      "auth": {
+        "EcommerceFlutter": {}
+      }
+    }
+  }
+}
